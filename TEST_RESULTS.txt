@@ -1,0 +1,30 @@
+=== ORBIT REVERB - test offline ===
+[PASS] Dry intatto con Wet 0 e ORBIT attivo  (diff max 0.00000000)
+[PASS] Impulso @ 44.1 kHz: stabile e RT60 corretto  (RT60 misurato 1.85 s (atteso ~2.0), picco 0.119)
+[PASS] Impulso @ 48.0 kHz: stabile e RT60 corretto  (RT60 misurato 1.85 s (atteso ~2.0), picco 0.102)
+[PASS] Impulso @ 88.2 kHz: stabile e RT60 corretto  (RT60 misurato 1.93 s (atteso ~2.0), picco 0.080)
+[PASS] Impulso @ 96.0 kHz: stabile e RT60 corretto  (RT60 misurato 1.94 s (atteso ~2.0), picco 0.073)
+[PASS] DECAY: RT60 segue il parametro  (0.4s->0.36s 1.0s->0.95s 3.0s->2.76s 8.0s->7.44s)
+[PASS] FREEZE: coda infinita stabile per 30 s e chiusa al nuovo audio  (livello 2-3s -30.1 dB, min -31.3 dB, max -30.2 dB)
+[PASS] Stabilita' con parametri estremi in tutti i 7 modi (20 s)  (picchi: CLEAN 1.99  LUSH 2.15  DARK 0.89  GATED 2.05  SHIMMER 1.44  INFINITE 2.76  ORBITAL 2.05)
+[PASS] Automazione casuale continua di tutti i parametri (15 s)  (picco 1.71)
+[PASS] ORBIT sposta il riverbero tra sinistra e destra  (escursione bilanciamento: OFF 0.15, ON 1.54)
+[PASS] ORBIT RATE: periodo del movimento  (1.0 Hz -> periodo misurato 1.000 s)
+[PASS] ORBIT: nessun salto di posizione con automazione brusca  (passo max per blocco 0.290)
+[INFO] SYNC, verifica con passaggi per lo zero: 120 BPM -> 0.500 s, 90 BPM -> 0.666 s
+[PASS] SYNC: giro da 1/4 a tempo con il BPM (anche dopo un cambio di BPM)  (120 BPM -> 0.500 s (atteso 0.500), 90 BPM -> 0.670 s (atteso 0.667))
+[PASS] SYNC: fase agganciata alla posizione musicale (PPQ)  (errore max 0.000 rad)
+[PASS] SHIMMER: compare l'ottava sopra (880 Hz da un La 440)  (880/440 nella coda: CLEAN -57.4 dB, SHIMMER -0.4 dB)
+[PASS] DUCKING: wet ridotto durante il suono, coda libera dopo  (durante: -11.6 dB, dopo: -1.7 dB)
+[PASS] ATTACK: energia del riverbero che cresce (swell) e poi raggiunge il livello pieno  (primi 200 ms: -16.0 dB; a regime diff 0.5 dB)
+[PASS] RELEASE: dissolvenza della coda dopo la fine del suono  (a 0.8-1.0 s: -45.5 dB rispetto a Natural)
+[PASS] GATED: taglio netto dopo il tempo di gate  (a 0.8-1.0 s: -140.0 dB rispetto a CLEAN)
+[PASS] Stato: salvataggio e ripristino di tutti i parametri
+[PASS] Stato: ripristino corretto anche partendo da valori intermedi (bool e scelte)  (tutti i parametri riallineati)
+[PASS] 12 preset di fabbrica caricabili e stabili  (Vocal Space, Wide Trap Vocal, Drill Atmosphere, Dark Hall, Infinite Pad, Dreamy R&B, Psychedelic Orbit, Fast Stereo Bounce, Cinematic Huge Hall, Short Plate, Shimmer Cloud, Reverse-Style Swell)
+[PASS] Ingresso mono -> uscita stereo  (picco 0.577)
+[PASS] Cambio di sample rate sulla stessa istanza (44.1 > 96 > 48 > 88.2 kHz)
+[PASS] Bypass: uscita identica all'ingresso  (diff max 0.00000000)
+[PASS] Compatibilita' mono: livello della somma L+R con ORBIT al massimo  (differenza rispetto al riverbero fermo -1.02 dB)
+[INFO] CPU: 20 s di audio stereo a 48 kHz (SHIMMER + ORBIT) elaborati in 0.41 s -> 2.1% di un core
+=== 26 PASS, 0 FAIL ===
